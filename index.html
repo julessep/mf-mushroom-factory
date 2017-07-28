@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mushroom factory</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-app = 'app'>
+  
+  
+  <h1>mushroom factory</h1>
+  <img src="mushroom.png">
+
+  <input ng-model="mushSearch" placeholder="search description...">
+    <input type="radio" ng-model="edible" value="false">poisonous
+    <input type="radio" ng-model="edible" value="true">non-poisonus
+
+  <div ng-controller="MushController">
+    <ul>
+      <li ng-repeat="mush in mushList | filter: {description:mushSearch} | filter: edible">
+        <h2>{{mush.name}}</h2>
+        <h4>{{mush.edible ? "edible" : "inedible"}}</h4>
+        <p>{{mush.description}}</p>
+      </li>
+    </ul>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/factories/mushroom-factory.js"></script>
+<script src="app/controllers/mushroom-controller.js"></script>
+</body>
+</html>
