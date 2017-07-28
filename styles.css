@@ -1,0 +1,29 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+img {
+  height: 50px;
+  display: inline-block;
+}
+
+nav ul {
+  list-style-type: none;
+  float: right;
+  margin-right: 200px;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
